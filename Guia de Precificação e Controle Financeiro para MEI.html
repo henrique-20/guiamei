@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guia de Precificação e Controle Financeiro para MEI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdf9ef;--soft:#fbefc9;--card:#fff7e0;--line:#f0dfae;--ink:#2a1f14;--muted:#6a5b49;--gold:#e0a82e;--gold-d:#9a6b0a;--ok:#2e7d4f;--btn:#2a1f14;--btn-t:#fff;--on-gold:#2a1f14;--foot:#2a1f14;--foot-t:#f4ead6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17120c;--soft:#241c10;--card:#211a10;--line:#3a2e18;--ink:#f6ecd9;--muted:#bba98e;--gold:#e8b84a;--gold-d:#e8b84a;--ok:#5ec38a;--btn:#f6ecd9;--btn-t:#2a1f14;--foot:#0f0b07;--foot-t:#e8dcc4}}
+:root[data-theme="dark"]{--bg:#17120c;--soft:#241c10;--card:#211a10;--line:#3a2e18;--ink:#f6ecd9;--muted:#bba98e;--gold:#e8b84a;--gold-d:#e8b84a;--ok:#5ec38a;--btn:#f6ecd9;--btn-t:#2a1f14;--foot:#0f0b07;--foot-t:#e8dcc4}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;-webkit-text-size-adjust:100%}
+.wrap{max-width:480px;margin:0 auto;padding:0 20px}
+section{padding:44px 0}.alt{background:var(--soft)}
+h1,h2,h3{line-height:1.1;margin:0;letter-spacing:-.02em}
+h1{font-size:2.15rem;font-weight:800;text-align:center}h2{font-size:1.65rem;font-weight:800;text-align:center}
+.g{color:var(--gold)}.sub{text-align:center;color:var(--muted);margin:14px 0 0}
+.top{background:var(--gold);color:var(--on-gold);text-align:center;font-weight:800;font-size:.9rem;padding:11px}
+.pill{display:block;width:fit-content;margin:12px auto 0;background:var(--soft);border:1px solid var(--line);border-radius:99px;padding:7px 16px;font-size:.85rem;font-weight:700}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:800;font-size:1.05rem;padding:17px 20px;border-radius:99px;background:var(--gold);color:var(--on-gold);box-shadow:0 6px 18px rgba(224,168,46,.35);margin-top:26px}
+.btn.dk{background:var(--btn);color:var(--btn-t);box-shadow:none}
+.micro{text-align:center;color:var(--muted);font-size:.82rem;margin-top:12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 6px;text-align:center;font-size:.78rem;color:var(--muted)}
+.stat b{display:block;font-size:1.5rem;color:var(--gold-d);font-weight:800}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;margin-top:16px}
+.card h3{font-size:1.1rem;margin-bottom:10px}
+ul{list-style:none;margin:0;padding:0}li{padding:7px 0 7px 26px;position:relative;font-size:.95rem}
+li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:800}
+li.x{color:var(--muted)}li.x::before{content:"✕";color:var(--muted)}
+.calc{background:var(--bg);border:1px dashed var(--gold);border-radius:16px;padding:16px;margin-top:14px;font-size:.92rem}
+.calc div{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line)}
+.calc div:last-child{border:0;font-weight:800;font-size:1.05rem;color:var(--gold-d)}
+.ctitle{font-weight:800;margin-bottom:6px}
+.tag{display:inline-block;background:var(--gold);color:var(--on-gold);font-weight:800;font-size:.75rem;border-radius:99px;padding:4px 12px;margin-bottom:10px}
+.plan{background:var(--bg);border:1px solid var(--line);border-radius:26px;padding:24px 20px;margin-top:18px;position:relative}
+.plan.best{border:2px solid var(--gold);background:var(--card)}
+.plan .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%)}
+.plan h3{text-align:center;font-size:1.25rem}.plan .d{text-align:center;color:var(--muted);font-size:.9rem;margin:4px 0 14px}
+.price{text-align:center;font-size:3.1rem;font-weight:800;line-height:1}.price small{font-size:1.3rem;margin-right:4px}
+.once{text-align:center;color:var(--muted);font-size:.85rem;margin:6px 0 14px}
+details{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin-top:10px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--gold-d);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:10px 0 0;color:var(--muted);font-size:.93rem}
+.guar{display:flex;gap:14px;align-items:center}.guar .ic{font-size:2.2rem}
+footer{background:var(--foot);color:var(--foot-t);padding:30px 0 40px;font-size:.8rem;text-align:center}
+footer p{margin:6px 0;opacity:.85}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="top">Preço de lançamento: garanta o seu hoje</div>
+
+<header><div class="wrap" style="padding-top:28px">
+<span class="pill">Guia em PDF + planilhas para MEI e autônomos</span>
+<h1 style="margin-top:22px">Pare de chutar preço. Saiba <span class="g">quanto cobrar</span> e quanto sobra no seu bolso.</h1>
+<p class="sub" style="font-size:1.05rem">Um guia prático de precificação e controle financeiro para quem trabalha por conta própria. Abra, siga o passo a passo e organize seu dinheiro ainda hoje.</p>
+<a class="btn" href="#planos">QUERO ACESSO AGORA</a>
+<p class="micro">Acesso imediato · 7 dias de garantia · Pagamento seguro</p>
+</div></header>
+
+<section><div class="wrap">
+<h2>Isso acontece com <span class="g">você</span>?</h2>
+<div class="card"><ul>
+<li>Cobra “no olho” e não sabe se está lucrando</li>
+<li>Mistura o dinheiro pessoal com o do negócio</li>
+<li>No fim do mês o dinheiro entrou, mas não sabe onde foi</li>
+<li>Tem medo de aumentar o preço e perder cliente</li>
+<li>Não separa nada para o DAS e para imprevistos</li>
+</ul></div></div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Tudo o que você <span class="g">recebe hoje</span></h2>
+<p class="sub">Um guia direto ao ponto, com exemplos e planilhas prontas pra preencher. Você baixa e usa na mesma hora.</p>
+<div class="stats"><div class="stat"><b>6</b>módulos</div><div class="stat"><b>3</b>planilhas</div><div class="stat"><b>7 dias</b>de garantia</div></div>
+<div class="card"><h3>Os 6 módulos do guia</h3><ul>
+<li>Módulo 1: Separe o dinheiro pessoal do dinheiro do negócio</li>
+<li>Módulo 2: Descubra seus custos reais (fixos, variáveis e o seu tempo)</li>
+<li>Módulo 3: A fórmula do preço certo e da margem de lucro</li>
+<li>Módulo 4: Fluxo de caixa simples: o que entra e o que sai</li>
+<li>Módulo 5: Reserva para o DAS, impostos e imprevistos</li>
+<li>Módulo 6: Rotina de 15 minutos por semana para manter tudo em dia</li>
+</ul></div>
+<div class="card"><h3>As planilhas</h3><ul>
+<li>Calculadora de preço de venda</li>
+<li>Controle de fluxo de caixa mensal</li>
+<li>Painel de metas e lucro</li>
+</ul></div></div></section>
+
+<section><div class="wrap">
+<h2>Veja como é <span class="g">por dentro</span></h2>
+<p class="sub">Exemplo de cálculo do Módulo 3: o preço sai de uma conta, não de um palpite.</p>
+<div class="card"><div class="ctitle">Exemplo: produto que custa R$ 30 pra você</div>
+<div class="calc">
+<div><span>Custo do produto</span><span>R$ 30,00</span></div>
+<div><span>Taxas e despesas</span><span>10%</span></div>
+<div><span>Margem de lucro desejada</span><span>30%</span></div>
+<div><span>Preço de venda (30 ÷ 0,60)</span><span>R$ 50,00</span></div>
+</div>
+<p class="micro" style="text-align:left">Exemplo ilustrativo. No guia você aprende a fazer isso com os seus números.</p></div></div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Bônus <span class="g">do pacote completo</span></h2>
+<div class="card"><span class="tag">BÔNUS 1</span><h3>Checklist de fechamento do mês</h3><p class="sub" style="text-align:left;margin:0">Passo a passo para conferir entradas, saídas e separar o DAS todo mês.</p></div>
+<div class="card"><span class="tag">BÔNUS 2</span><h3>Modelo de tabela de preços</h3><p class="sub" style="text-align:left;margin:0">Layout pronto para apresentar seus valores aos clientes com clareza.</p></div>
+<div class="card"><span class="tag">BÔNUS 3</span><h3>Planilha de metas de faturamento</h3><p class="sub" style="text-align:left;margin:0">Defina quanto precisa vender por mês para chegar no lucro que você quer.</p></div>
+<a class="btn" href="#planos">Garantir com os bônus</a>
+</div></section>
+
+<section id="planos"><div class="wrap">
+<h2>Garanta seu <span class="g">acesso</span></h2>
+<p class="sub">Escolha o pacote ideal para você:</p>
+<div class="plan"><h3>PACOTE BÁSICO</h3><p class="d">Só o guia, para começar hoje mesmo</p>
+<div class="price"><small>R$</small>9,90</div><p class="once">pagamento único</p>
+<ul><li>Guia em PDF com os 6 módulos</li><li>Exemplos práticos de cálculo</li><li>Acesso digital imediato</li>
+<li class="x">3 planilhas prontas</li><li class="x">3 bônus exclusivos</li></ul>
+<a class="btn dk" id="buy-basico" href="#planos">QUERO O BÁSICO</a></div>
+<div class="plan best"><span class="tag">MAIS COMPLETO</span><h3>PACOTE COMPLETO</h3><p class="d">Guia + planilhas + bônus</p>
+<div class="price"><small>R$</small>19,90</div><p class="once">pagamento único</p>
+<ul><li>Guia em PDF com os 6 módulos</li><li>Calculadora de preço de venda</li><li>Controle de fluxo de caixa mensal</li><li>Painel de metas e lucro</li><li>3 bônus exclusivos</li><li>Garantia incondicional de 7 dias</li></ul>
+<a class="btn" id="buy-completo" href="#planos">QUERO O COMPLETO</a>
+<p class="micro">Acesso imediato no seu e-mail</p></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="card guar"><div class="ic">🛡️</div><div><h3>Garantia de 7 dias</h3><p style="margin:6px 0 0;color:var(--muted);font-size:.93rem">Se não gostar, peça o reembolso em até 7 dias após a compra e devolvemos seu dinheiro.</p></div></div></div></section>
+
+<section><div class="wrap">
+<h2>Ficou com alguma <span class="g">dúvida?</span></h2>
+<details><summary>Pra quem é esse material?</summary><p>Para MEIs e autônomos que querem definir preços com segurança e organizar o dinheiro do negócio, mesmo sem experiência com finanças.</p></details>
+<details><summary>As planilhas são editáveis?</summary><p>Sim. Você preenche com os seus números e adapta ao seu negócio.</p></details>
+<details><summary>Em que formato vem o material?</summary><p>O guia vem em PDF e as planilhas em arquivo editável. Você recebe o acesso por e-mail logo após a confirmação do pagamento.</p></details>
+<details><summary>Preciso entender de finanças?</summary><p>Não. O guia usa linguagem simples e exemplos do dia a dia.</p></details>
+<details><summary>E se eu não gostar? Tem garantia?</summary><p>Tem. Você tem 7 dias para pedir o reembolso, sem burocracia.</p></details>
+<details><summary>Como funciona o pagamento?</summary><p>Pagamento único e seguro, feito em ambiente de pagamento protegido. Sem mensalidade.</p></details>
+<a class="btn" href="#planos">QUERO COMEÇAR AGORA</a>
+</div></section>
+
+<footer><div class="wrap">
+<p>Produto digital de caráter educacional. Não substitui o trabalho de um contador.</p>
+<p>Os resultados dependem da aplicação do conteúdo em cada negócio.</p>
+<p>© 2026 · Todos os direitos reservados</p>
+</div></footer>
+</body>
+</html>
